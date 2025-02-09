@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Formulario de Usuario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Estilos para los fieldset */
+        fieldset {
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-sizing: border-box; 
+        }
+        legend {
+            font-size: 1.2rem;
+            color: #007BFF;
+            padding: 0 5px;
+        }
+
+        /* Estilos para los inputs */
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            margin-top: 5px;
+            box-sizing: border-box; 
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        /* Estilos para el botón */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos de la sección y el formulario */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+    </head>
+    <body>
+    <section>
+        <h1>Formulario de Registro</h1>
+        <form action="UserServlet">
+            <div>
+                <fieldset>
+                    <legend>Nombre</legend>
+                    <input type="text" name="userName" required>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Edad</legend>
+                    <input type="number" name="userAge" required>
+                </fieldset>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+
+</html>
